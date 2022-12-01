@@ -1,0 +1,179 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 5px;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    min-height: 100%;
+    background-image: url('./consultorio.jpg');
+}
+.logo{
+    height: 120px;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-top: 0%;
+    padding: 0%;
+}
+.logo:hover{
+    box-shadow: -1px 1px 7px 0px  rgb(44, 128, 255);
+}
+.logo2{
+    width: 200px;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-top: 0%;
+    padding: 0%;
+}
+.logo2:hover{
+    box-shadow: -1px 1px 7px 0px rgb(44, 128, 255);
+}
+.grid-container > *{
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+}
+.grid-container{
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+    "header"
+    "navbar"
+    "main"
+    "sidebar"
+    "footer";
+}
+h1{
+    color: rgb(44, 128, 255);
+    font-size: 3rem;
+    text-shadow: 1px 1px black;
+}
+h2{
+    color: rgb(44, 128, 255);
+    font-size: 1.5rem;
+    text-shadow: 1px 1px black;
+}
+.header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    text-align: center;
+    height: 150px;
+}
+.uno{
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+    border-radius: 20px;
+    max-width: 110px;
+    padding-top: 10px;
+}
+.uno:hover{
+    box-shadow: -1px 1px 7px 0px  rgb(44, 128, 255);
+}
+.dos{
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+    border-radius: 20px;
+    max-width: 110px;
+    padding-top: 10px;
+}
+.dos:hover{
+    box-shadow: -1px 1px 7px 0px  rgb(44, 128, 255);
+}
+.tres{
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+    border-radius: 20px;
+    max-width: 110px;
+    padding-top: 10px;
+}
+.tres:hover{
+    box-shadow: -1px 1px 7px 0px  rgb(44, 128, 255);
+}
+.cuatro{
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+    border-radius: 20px;
+    max-width: 110px;
+    padding-top: 10px;
+}
+.cuatro:hover{
+    box-shadow: -1px 1px 7px 0px  rgb(44, 128, 255);
+}
+.navbar {
+    grid-area: navbar;
+    background-image: url('Marca de Agua Café Colao.png');
+    background-size: 50px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 10px;
+}
+.imgnav{
+    width: 70px;
+    border-radius: 5px;
+}
+.logo3{
+    width: 400px;
+}
+.sidebar {
+    grid-area: sidebar;
+    background-color:  rgba(44, 128, 255, 0.637);
+    text-align: justify;
+    color: lightblue;
+    text-shadow: 1px 1px green;
+}
+.ubicac{
+    width: 130px;
+}
+.main {
+    grid-area: main;
+    background-image: url('IMG4.jpg');
+    background-size: cover;
+    background-position-x: left;
+}
+.imgmain{
+    width: 100px;
+    border-radius: 20px;
+}
+.imgmain:hover{
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+}
+.imgfooter{
+    width: 50px;
+}
+.footer {
+    grid-area: footer;
+    background-image: url('Granos de café 1.jpg');
+    background-size: 120px;
+    background-position-y: start;
+}
+@media (min-width:600px){
+    .grid-container{
+        grid-gap: 20px;
+        grid-template: 
+        "header  header" 150px
+        "navbar  navbar" auto
+        "sidebar main"   auto 
+        "footer  footer" 120px/
+        200px    auto;
+        overflow-y: scroll;
+    }
+}
+@media (min-width:900px){
+    .grid-container{
+        grid-template: 
+        "header  header header"  150px
+        "navbar  main   sidebar" auto
+        "footer  footer footer"  120px/
+        150px    auto    200px;
+        overflow-y: scroll;
+    }
+    .navbar {
+        grid-area: navbar;
+        grid-template: 
+        "uno"       100px
+        "dos"       100px
+        "tres"      100px
+        "cuatro"    100px;
+        grid-row-gap: 20px;
+    }
+}
